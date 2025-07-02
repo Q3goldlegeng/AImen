@@ -9,11 +9,33 @@
 <body>
   <h1>🙏 AImen 禱告產生器</h1>
 
+  <label for="topicSelect">選擇禱告主題：</label><br />
+  <select id="topicSelect">
+    <option value="感恩">感恩</option>
+    <option value="壓力">壓力</option>
+    <option value="身體健康">身體健康</option>
+    <option value="家庭">家庭</option>
+    <option value="學業">學業</option>
+    <option value="朋友">朋友</option>
+    <option value="自由輸入">自由輸入</option>
+  </select>
+
+  <div id="customTopicContainer" style="display: none;">
+    <input type="text" id="topicInput" placeholder="請輸入自訂主題..." />
+  </div>
+
+  <br><br>
   <button id="generateBtn">產生禱告文</button>
   <button id="speakBtn">🔊 播放語音</button>
 
-  <div id="result" style="margin-top: 30px;"></div>
+  <div id="loading" style="display: none;">⏳ 正在產生禱告文...</div>
+
+  <div id="result"></div>
 
   <script src="script.js"></script>
 </body>
+
+
 </html>
+
+
